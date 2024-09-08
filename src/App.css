@@ -1,38 +1,103 @@
-.App {
+main {
+  /* background-color: beige; */
+  background-color: whitesmoke;
+  min-height: 97vh;
+}
+
+header {
   text-align: center;
+  padding: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header h1 {
+  font-size: 32px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header p {
+  font-size: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Page Not Found Component */
+.page-not-found-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+#pageNotFound {
+  width: 58%;
+  background-color: #f0f0ed;
+  box-shadow: 0px 0px 20px 5px lightblue;
+}
+#pageNotFound img {
+  width: 100%;
+}
+.homePage-btn {
+  cursor: pointer;
+  border-radius: 7px;
+  padding: 10px;
+  background-color: #1f4690;
+  color: #fff;
+}
+
+/* Word Counter */
+.container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.textContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1em;
+}
+#clear-text {
+  background-color: darkgray;
+  width: 8%;
+  padding: 8px;
+  text-align: center;
+  border-radius: 8px;
+}
+#clear-text-active {
+  background-color: red;
+  cursor: pointer;
+  width: 8%;
+  padding: 8px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px black;
+}
+#text-area {
+  resize: none;
+  padding: 17px;
+  box-shadow: 0px 0px 20px 5px lightblue;
+  /* box-shadow: 0px 4px 10px rgba(173, 216, 230, 0.5); */
+  border: none;
+  border-radius: 15px;
+  outline: none;
+}
+.counter {
+  align-items: center;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 27em;
+}
+#character-count,
+#word-count {
+  background-color: #1f4690;
+  padding: 8px;
+  width: 7%;
+  border-radius: 5px;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (min-width: 1000px) and (max-width: 1500px) {
+  #character-count,
+  #word-count {
+    width: 10%;
   }
 }
